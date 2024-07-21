@@ -90,23 +90,51 @@ function App() {
         <h1>
           Test
         </h1>
-        {Question(questions[questionIndex].question, chalanceScore, setChalanceScore)}
+        {Question(questions[questionIndex].question, questionIndex, chalanceScore, setChalanceScore)}
         <button onClick={()=>{set(false)}}>Return home</button>
       </div>
     )
   }
 
-  const Question = (title, score, setScore) => {
+  const Question = (title, qIndex, score, setScore) => {
     return(
       <div>
-        <label for="questionInput">{title}</label>
-        <input type="range" id="questionInput" name ="sumn" list="values"/>
 
-        <datalist id="values">
-          <option value="-5" label="I could never"></option>
-          <option value="0"></option>
-          <option value="5" label="me asf"></option>
-        </datalist>
+        <form>
+          <label for="statement">Question {qIndex}: <br></br> {title}.</label><br></br><br></br>
+          
+          
+          <input type="radio"
+            id="sa"
+            name="statement"
+            value="5"
+          /><label for="sa">Strongly Agree</label><br></br>
+          
+          <input type="radio"
+            id="a"
+            name="statement"
+            value="2"
+          /><label for="a">Agree</label><br></br>
+          
+          <input type="radio"
+            id="n"
+            name="statement"
+            value="0"
+          /><label for="n">Neutral</label><br></br>
+          
+          <input type="radio"
+            id="d"
+            name="statement"
+            value="-2"
+          /><label for="d">Disagree</label><br></br>
+          
+          <input type="radio"
+            id="sd"
+            name="statement"
+            value="-5"
+          /><label for="sd">Strongly Disagree</label><br></br>
+          
+        </form>
       </div>
     )
   }
