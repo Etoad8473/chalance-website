@@ -9,7 +9,7 @@ function Question (q, qIndex, nextQuestion, score, setScore) {
     <div>
 
       <form>
-        <label htmlFor="statement">Question {qIndex}: <br></br>
+        <label htmlFor="statement"> the Question {qIndex}: <br></br>
          {q.sentence}.</label><br></br>
          <br></br>
         
