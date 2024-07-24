@@ -2,14 +2,14 @@ import { useState, useEffect } from 'react';
 // import './App.css';
 
 
-function Question (q, qIndex, setQIndex, score, setScore) {
+function Question (q, qIndex, nextQuestion, score, setScore) {
 
 
   return(
     <div>
 
       <form>
-        <label for="statement">Question {qIndex}: <br></br>
+        <label htmlFor="statement">Question {qIndex}: <br></br>
          {q.sentence}.</label><br></br>
          <br></br>
         
@@ -18,30 +18,30 @@ function Question (q, qIndex, setQIndex, score, setScore) {
           id="sa"
           name="statement"
           value="5"
-        /><label for="sa">Strongly Agree</label><br></br>
+        /><label htmlFor="sa">Strongly Agree</label><br></br>
         
         <input type="radio"
           id="a"
           name="statement"
           value="2"
-        /><label for="a">Agree</label><br></br>
+        /><label htmlFor="a">Agree</label><br></br>
         
         <input type="radio"
           id="d"
           name="statement"
           value="-2"
-        /><label for="d">Disagree</label><br></br>
+        /><label htmlFor="d">Disagree</label><br></br>
         
         <input type="radio"
           id="sd"
           name="statement"
           value="-5"
-        /><label for="sd">Strongly Disagree</label><br></br>
+        /><label htmlFor="sd">Strongly Disagree</label><br></br>
 
         <button onClick={()=>{
-            setQIndex(qIndex + 1)
-            let ansVal = parseInt(document.querySelector('input[name="statement"]:checked').value)
-            setScore(score + q.chalance * ansVal)
+            let ansVal = parseInt(document.querySelector('input[name="statement"]:checked').value);
+            setScore(score + q.chalance * ansVal);
+            nextQuestion();
         }}>Next Question</button>
 
       </form>
