@@ -123,7 +123,7 @@ function App() {
   }
 
   const handleNextQuestion = () => {
-    if(questionIndex<questions.length){
+    if(questionIndex<questions.length-1){
       setQuestionIndex(questionIndex+1);
     }
     else{
