@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-// import './App.css';
+import { QuestionContext } from '../contexts/QuestionContext';
 
 
 function Question (q, qIndex, nextQuestion, score, setScore) {
