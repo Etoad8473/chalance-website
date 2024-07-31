@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
-import './App.css';
-import Question from './components/Question';
+import './styles/App.css';
+import {Question} from './components/Question';
 import { Home } from './pages/Home';
-import { Results } from './pages/Results';
 import { Test } from './pages/Test';
+import { Questions } from "../contexts/QuestionContext";
 
 function App() {
 
