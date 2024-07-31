@@ -5,7 +5,7 @@ import Question from "../components/Question.js"
 
 export const Test = ({set})=>{
 
-  const { questions } = useContext(QuestionContext);
+  const questions = useContext(QuestionContext);
 
   
 
