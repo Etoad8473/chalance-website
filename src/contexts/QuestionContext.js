@@ -72,7 +72,7 @@ export const QuestionContext = createContext(questions);
 
 //provider component
 export const QuestionProvider = ({children}) => {
-    const [state,dispatch] = useReducer(AppReducer,questions);
+    const [state,dispatch] = useReducer(AppReducer, questions);
 
     return(
         <QuestionContext.Provider value={{questions:state.questions}}>
