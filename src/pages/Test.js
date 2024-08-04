@@ -17,7 +17,7 @@ export const Test = ({set})=>{
         {
           questions['index'] >= questions.questionList.length ? <Results/> : <Question/>
         }
-      <button onClick={()=>{questions.isTesting = false;}}>Return home</button><br></br>
+      {/* <button onClick={()=>{questions.isTesting = false;}}>Return home</button><br></br> */}
       {/* <button onClick={()=>{setTestIsFinished(true)}}>end test</button> */}
     </div>
   )
