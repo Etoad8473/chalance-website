@@ -3,7 +3,7 @@ import './styles/App.css';
 import {Question} from './components/Question';
 import { Home } from './pages/Home';
 import { Test } from './pages/Test';
-import { QuestionContext } from "./contexts/QuestionContext";
+import { QuestionContext, QuestionProvider } from "./contexts/QuestionContext";
 import {Progressbar} from "./components/Progressbar"
 function App() {
 
@@ -32,11 +32,13 @@ function App() {
 
   return (
     <div className="App">
-      <Progressbar/>
-      {/* <button onClick={()=>{setQuestionIndex(questionIndex-1)}}>-</button> */}
-      {/* <button onClick={()=>{setQuestionIndex(questionIndex+1)}}>+</button> */}
-      
-      {isTesting ? <Test set = {setIsTesting}/> : <Home set = {setIsTesting}/> }
+      <QuestionProvider>
+        <Progressbar/>
+        {/* <button onClick={()=>{setQuestionIndex(questionIndex-1)}}>-</button> */}
+        {/* <button onClick={()=>{setQuestionIndex(questionIndex+1)}}>+</button> */}
+        
+        {isTesting ? <Test set = {setIsTesting}/> : <Home set = {setIsTesting}/> }
+      </QuestionProvider>
     </div>
   );
 }

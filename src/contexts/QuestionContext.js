@@ -74,8 +74,16 @@ export const QuestionContext = createContext(questions);
 export const QuestionProvider = ({children}) => {
     const [state,dispatch] = useReducer(AppReducer, questions);
 
+    //Actions
+    const nextQuestion = () => {
+        dispatch({type: 'NEXT_QUESTION'})
+    }
+
     return(
-        <QuestionContext.Provider value={{questions:state.questions}}>
+        <QuestionContext.Provider value={{
+            questions:state,
+            nextQuestion
+        }}>
             {children}
         </QuestionContext.Provider>
     );

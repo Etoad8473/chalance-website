@@ -1,18 +1,21 @@
 import { useState, useEffect, useContext } from 'react';
-import { QuestionContext } from '../contexts/QuestionContext';
+import { QuestionContext, QuestionProvider } from '../contexts/QuestionContext';
 
 
-function Question (/*q, qIndex, nextQuestion, score, setScore*/) {
+function Question () {
 
-  const questions = useContext(QuestionContext);
+  const {questions, nextQuestion} = useContext(QuestionContext);
 
+  const handleNextQuestion = () =>{
+    nextQuestion();
+  }
 
   return(
     <div>
 
       <form>
-        <label htmlFor="statement"> Question {questions.index + 1}: <br></br>
-         {questions.questionList[questions.index].sentence}.</label><br></br>
+        {/* <label htmlFor="statement"> Question {questions.index + 1}: <br></br>
+         {questions.questionList[questions.index].sentence}.</label><br></br> */}
          <br></br>
         
         
@@ -40,11 +43,7 @@ function Question (/*q, qIndex, nextQuestion, score, setScore*/) {
           value="-5"
         /><label htmlFor="sd">Strongly Disagree</label><br></br>
 
-        <button onClick={()=>{
-            let ansVal = parseInt(document.querySelector('input[name="statement"]:checked').value);
-            // setScore(score + q.chalance * ansVal);
-            // nextQuestion();
-        }}>Next Question</button>
+        <button type='button' onClick={handleNextQuestion}>Next Question</button>
 
       </form>
 
