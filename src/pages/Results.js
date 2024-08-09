@@ -1,11 +1,14 @@
-import React from "react";
-import { Questions } from "../contexts/QuestionContext";
+import React, { useContext } from "react";
+import { QuestionContext, Questions } from "../contexts/QuestionContext";
 
 export const Results = () => {
+
+    const {questions} = useContext(QuestionContext);
+
     return (
       <div>
         <h1>Finished!!!</h1>
-        <p>Chalance Score: {chalanceScore}</p>
+        <p>Chalance Score: {questions.chalanceScore}</p>
       </div>
     )
   }
