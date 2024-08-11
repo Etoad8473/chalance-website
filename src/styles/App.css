@@ -1,44 +1,6 @@
-/* .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */
-
 @import url("https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700");
 @import url("https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i");
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
 
 * {
   margin: 0;
@@ -49,52 +11,50 @@
 :root {
   --font-roboto: "Roboto Slab", serif;
   --font-raleway: "Raleway", sans-serif;
+  --font-alfa-slab: "Alfa Slab One", serif;
+  --beige: #ebe9e1;
+  --red: #e43d12;
+  --yellow: #efb11D;
+  --pink: #ffa2b6;
 }
 
 body {
-  box-sizing: border-box;
   font-family: var(--font-roboto);
-  background-color: #ff8360;
-  padding: 4rem;
-  color: #E8E288;
+  background-color: var(--beige);
+  color: var(--red);
 
-  /* display: flex; */
-  justify-content: center;
-  /* align-items: center; */
-  /* flex-direction: column; */
-}
-
-.start-btn{
-  border-radius: 10px;
-  /* width: 100%; */
-  color: #289791;
-  background-color: #00fff5;
-  padding: 15px 5px;
-  /* display:block; */
+  display: flex; /*basically always do this for responsive design*/
+  justify-content: center; /*centers horizontally*/
+  align-items: center; /*centers vertically:*/
+  height: 100vh; /*make this box the height of the whole page*/
+  margin: 0;
 }
 
 .home{
-  display:flex;
-  justify-content:center;
-  background-color: black;
-  padding: 10vh 10vh;
-  height: 50vh;
-  align-content: center;
-  align-items:center;
+  /* background-color: rgb(43, 170, 100); */
+  text-align: center;
 }
 
 h1 {
-  font-size: 3rem;
-  letter-spacing: 0.9px;
-  /* background: linear-gradient(
-    90deg,
-    rgba(249, 211, 180, 1) 0%,
-    rgba(249, 211, 180, 0) 100%
-  ); */
-  /* background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; */
-  /* color: aliceblue; */
-  width: fit-content;
-  display: block;
+  font-size: 6rem;
+  letter-spacing: .75rem;
+  /* border-bottom: 1px solid var(--red); */
+  margin: 2rem;
+  font-family: var(--font-alfa-slab);
+}
+
+.start-btn{
+  border-radius: 0.5rem;
+  color: var(--beige);
+  background-color: var(--pink);
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: color .3s, transform 0.5s;
+}
+
+.start-btn:hover{
+  color: var(--red);
+  transform: scale(105%);
 }

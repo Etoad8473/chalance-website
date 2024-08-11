@@ -5,7 +5,7 @@ export const Home = ({set})=>{
     <div className="page home">  
 
       <div>
-        <h1>Chalance!</h1>
+        <h1>CHALANCE!</h1>
       </div>      
       {/* <iframe 
         width="400" 
