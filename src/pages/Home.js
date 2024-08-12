@@ -1,11 +1,11 @@
-import React from "react"
+import React from "react";
 
 export const Home = ({set})=>{
     return(
     <div className="page home">  
-
       <div>
         <h1>CHALANCE!</h1>
+        <p>It's everything I ever could've imagined</p>
       </div>      
       {/* <iframe 
         width="400" 

@@ -2,6 +2,7 @@ import React, { useContext } from "react"
 import {Results} from "./Results.js";
 import { QuestionContext } from "../contexts/QuestionContext";
 import Question from "../components/Question.js"
+import { Progressbar } from "../components/Progressbar.js";
 
 export const Test = ({set})=>{
 
@@ -11,6 +12,8 @@ export const Test = ({set})=>{
 
   return(
     <div>
+      <Progressbar/>
+
       <h1>
         Test
       </h1>

@@ -1,10 +1,11 @@
-import { useState, useEffect, useContext } from 'react';
+import { useState, useContext } from 'react';
 import './styles/App.css';
-import {Question} from './components/Question';
 import { Home } from './pages/Home';
 import { Test } from './pages/Test';
 import { QuestionContext, QuestionProvider } from "./contexts/QuestionContext";
-import {Progressbar} from "./components/Progressbar"
+import { Header } from './components/Header';
+import Footer from './components/Footer';
+
 function App() {
 
   const [questionIndex, setQuestionIndex] = useState(0);
@@ -32,13 +33,11 @@ function App() {
 
   return (
     <div className="App">
+      <Header/>
       <QuestionProvider>
-        <Progressbar/>
-        {/* <button onClick={()=>{setQuestionIndex(questionIndex-1)}}>-</button> */}
-        {/* <button onClick={()=>{setQuestionIndex(questionIndex+1)}}>+</button> */}
-        
         {isTesting ? <Test set = {setIsTesting}/> : <Home set = {setIsTesting}/> }
       </QuestionProvider>
+      <Footer/>
     </div>
   );
 }
