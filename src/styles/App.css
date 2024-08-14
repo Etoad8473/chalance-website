@@ -31,12 +31,17 @@
   
 }
 
-.header div{
-  display: flex;
+.header-link{
   margin: 0 .5rem;
+  font-family: var(--font-roboto);
+
 }
 
-.header-logo{
+#right-header-group{
+  display: flex;
+}
+
+#logo{
   font-weight: bold;
   font-size: 1rem;
 }

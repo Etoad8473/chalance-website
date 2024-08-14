@@ -14,8 +14,8 @@ function Question () {
     <div>
 
       <form>
-        {/* <label htmlFor="statement"> Question {questions.index + 1}: <br></br>
-         {questions.questionList[questions.index].sentence}.</label><br></br> */}
+        <label htmlFor="statement"> Question {questions.index + 1}: <br></br>
+         {questions.questionList[questions.index].sentence}.</label><br></br>
          <br></br>
         
         
