@@ -69,6 +69,21 @@ body {
   /* margin-top: 60rem; */
 }
 
+.test{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.progress-bar{
+  border-radius: 5px;
+  /* background-color: var(--yellow); */
+  padding: 5px;
+  border: 1px solid var(--red);
+  width: 50%;
+}
+
 h1 {
   font-size: 6rem;
   letter-spacing: .75rem;

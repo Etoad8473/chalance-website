@@ -5,14 +5,25 @@ import { QuestionContext } from '../contexts/QuestionContext'
 export const Progressbar = () => {
 
   const {questions} = useContext(QuestionContext);
-  // const questions = context.questions;
+  const progress = () =>{
+    return (questions.index/questions.questionList.length)*100
+  }
+  console.log(progress());
+  const progressBarStyle = {
+    
+  };
 
   return (
-    <div>
-      <p>Question index: {questions.index}</p>
+    <div className='progress-bar'>
+      {/* <p>Question index: {questions.index}</p>
       <p>Length of test: {questions['questionList'].length}</p>
-      {console.log(questions)}
-      <p>Chalance Score: {questions['chalanceScore']}</p>
+      <p>Chalance Score: {questions['chalanceScore']}</p> */}
+      <div style={{
+        width: `${progress()}%`,
+        backgroundColor: '#e43d12',
+        transition: 'width 0.1s ease',
+        padding:'1px 0'
+      }}></div>
     </div>
   )
 }

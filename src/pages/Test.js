@@ -12,7 +12,7 @@ export const Test = ({set})=>{
   
 
   return(
-    <div>
+    <div className="test">
       <Header/>
       <Progressbar/>
 
