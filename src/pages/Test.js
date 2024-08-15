@@ -8,7 +8,7 @@ import {Header} from '../components/Header';
 export const Test = ({set})=>{
 
   const {questions} = useContext(QuestionContext);
-
+  // console.log(questions);
   
 
   return(
@@ -20,7 +20,8 @@ export const Test = ({set})=>{
         Test
       </h1>
         {
-          // questions['index'] >= questions.questionList.length ? <Results/> : <Question/>
+          // console.log(questions)
+          questions['index'] >= questions.questionList.length ? <Results/> : <Question/>
         }
       {/* <button onClick={()=>{questions.isTesting = false;}}>Return home</button><br></br> */}
       {/* <button onClick={()=>{setTestIsFinished(true)}}>end test</button> */}
