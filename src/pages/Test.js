@@ -8,20 +8,20 @@ import {Header} from '../components/Header';
 export const Test = ({set})=>{
 
   const {questions} = useContext(QuestionContext);
-  // console.log(questions);
-  
+  const questionPage = () =>{
+    return(
+      <div>
+        <Progressbar/>
+        <Question/>
+      </div>
+    )
+  }
 
   return(
     <div className="test">
       <Header/>
-      <Progressbar/>
-
-      <h1>
-        Test
-      </h1>
         {
-          // console.log(questions)
-          questions['index'] >= questions.questionList.length ? <Results/> : <Question/>
+          questions['index'] >= questions.questionList.length ? <Results/> : questionPage()
         }
       {/* <button onClick={()=>{questions.isTesting = false;}}>Return home</button><br></br> */}
       {/* <button onClick={()=>{setTestIsFinished(true)}}>end test</button> */}
