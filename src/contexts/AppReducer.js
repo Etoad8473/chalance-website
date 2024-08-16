@@ -5,7 +5,8 @@ export default (state, action) => {
         case 'NEXT_QUESTION':
             return {
                 ...state,
-                index: state.index + 1
+                index: state.index + 1,
+                chalanceScore: state.chalanceScore + action.payload
                 // chalanceScore: action.payload
             }
 

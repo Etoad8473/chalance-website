@@ -22,8 +22,13 @@ export const Progressbar = () => {
         width: `${progress()}%`,
         backgroundColor: '#e43d12',
         transition: 'width 0.3s ease',
-        padding:'1px 0'
-      }}></div>
+        padding:'2px 0'
+      }}>
+      </div>
+      <p>
+        Chalance Score: {questions.chalanceScore}
+      </p>
+      {}
     </div>
   )
 }
